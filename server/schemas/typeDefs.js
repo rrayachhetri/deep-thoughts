@@ -16,7 +16,7 @@ type User {
 }
 type Thought {
     _id: ID
-    thoughText: String
+    thoughtText: String
     createdAt: String
     username: String
     reactionCount: Int
