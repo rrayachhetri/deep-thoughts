@@ -23,6 +23,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
+app.get("*", (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, './public/404.html'));
+});
+
 const startServer = async () => {
   // create a new apollo server and pass in our schema data
   const server = new ApolloServer({
